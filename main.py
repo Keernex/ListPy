@@ -4,7 +4,6 @@ listrandom = []
 for i in range(11):
   listrandom.append(random.randint(-10, 10))
 print("list random - ", listrandom)
-listrandom = [1,2,3,4,5,6,7,8,9,10]
 maxind = listrandom.index(max(listrandom))
 minind = listrandom.index(min(listrandom))
 ind = 0
@@ -31,12 +30,13 @@ for j in listrandom:
   if j >= 0:
     sumdodnoml.append(j)
   ind += 1
+
 a = listrandom.index(sumdodnoml[0])
 b = listrandom.index(sumdodnoml[-1])
-print(listrandom)
-c = sum(listrandom[a+1:b])
+c=0
+for i in range(a+1, b):
+  c+=listrandom[i]
 
-print(a,b,c)
 print("Суму від’ємних чисел.", sum)
 print("Суму парних чисел.", sum2)
 print("Суму непарних чисел.", sum1)
