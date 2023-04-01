@@ -5,8 +5,10 @@ for i in range(11):
   listrandom.append(random.randint(-10, 10))
 print("list random - ", listrandom)
 
-q=int(input())
+ser=sum(listrandom)/len(listrandom)
+print("середнє арифметичне ",ser)
 l=[]
-for i in range(0,q+1):
-  l.append(listrandom[i])
-print(max(l))
+for i in listrandom:
+  if ser<i:
+    l.append(i)
+print(l)
